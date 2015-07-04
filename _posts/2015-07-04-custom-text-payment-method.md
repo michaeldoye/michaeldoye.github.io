@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add custom text to email based on payment method
+title: "WooCommerce: Add custom text to email based on payment method"
 published: true
 ---
 
