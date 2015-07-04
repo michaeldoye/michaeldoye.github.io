@@ -12,7 +12,7 @@ Hi, I'm Michael. I can usually be found behind my computer screen tinkering arou
 
 ### More Information
 If you must know, I live in Cape Town, South Africa.  
-Currently working as head of development at [WebSEO](https://webseo.co.za)
+Currently working as head of development at [Web SEO](https://webseo.co.za)
 
 ### Contact me
 
