@@ -6,11 +6,12 @@ published: true
 ---
 
 
-Some information about you!
+
+Hi, I'm Michael. I can usually be found behind my computer screen tinkering around in a text editor.
 
 ### More Information
-A place to include any other types of information that you'd like to include about yourself.
+If you must know, I live in Cape Town, South Africa.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[michaeldoye@gmail.com](mailto:michaeldoye@gmail.com)
