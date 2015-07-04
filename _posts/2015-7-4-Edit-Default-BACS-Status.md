@@ -6,6 +6,7 @@ published: true
 
 
 
+
 By default, WooCommerce sets new orders placed via BACS (EFT) to the "on-hold" order status. This is sometimes a pain in the neck if your order flow needs to be customized.
 
 The snippet below will change the default status for BACS orders.  Simply add it to your theme functions.php file.
@@ -59,5 +60,3 @@ The snippet below will change the default status for BACS orders.  Simply add it
     
      }
 ```
-
-
