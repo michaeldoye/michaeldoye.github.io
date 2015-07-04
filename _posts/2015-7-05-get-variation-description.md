@@ -46,8 +46,10 @@ function get_var_desc() {
   }
 }
 ```
+Your jQuery should look something like this - you may need to make adjustments depending on how you have customized your product page (if at all)
+
 ```javascript
-The jQuery should look something like this
+
 jQuery(document).ready(function () {
 var $ = jQuery;
   // This is where the desctription will appear (change it what you need)
