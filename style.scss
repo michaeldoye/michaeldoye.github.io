@@ -243,6 +243,11 @@ nav {
       margin: 0 10px;
       color: $blue;
     }
+    
+    a:hover {
+      border-bottom: 2px solid #4183C4;
+      padding-bottom: 44px;
+    }
   }
 }
 
