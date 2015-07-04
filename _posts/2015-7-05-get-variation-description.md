@@ -6,7 +6,10 @@ published: true
 
 
 
-For this example we’ll add some helpful payment instructions to the email, based on the checkout payment type used
+
+When using product variations in WooCommerce, you have the option of adding a description for a single variation. However some themes do not show this by default.
+
+
 
 
 ```php
