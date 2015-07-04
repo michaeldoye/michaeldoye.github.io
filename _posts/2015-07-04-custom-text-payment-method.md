@@ -2,8 +2,11 @@
 published: true
 ---
 
-
-Add custom text to email based on payment method
+---
+layout: post
+title: "Add custom text to email based on payment method"
+published: true
+---
 
     //For this example we’ll add some helpful payment instructions to the email, based on the checkout payment type used
     // https://www.sellwithwp.com/customizing-woocommerce-order-emails/
