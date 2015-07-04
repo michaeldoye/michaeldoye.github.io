@@ -41,8 +41,8 @@ The snippet below will change the default status for BACS orders.  Simply add it
     
             $order = new WC_Order( $order_id );
     
-            // Mark as processing (that's what we want to change!)
-            $order->update_status('payment-ou', __( 'Awaiting BACS payment', 'woocommerce' ));
+            // Mark as processing (or anything you want)
+            $order->update_status('processing', __( 'Awaiting BACS payment', 'woocommerce' ));
     
             // Reduce stock levels
             $order->reduce_order_stock();
@@ -58,7 +58,5 @@ The snippet below will change the default status for BACS orders.  Simply add it
         }
     
      }
+     
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
