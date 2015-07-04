@@ -7,10 +7,12 @@ published: true
 
 
 
+
 Hi, I'm Michael. I can usually be found behind my computer screen tinkering around in a text editor.
 
 ### More Information
-If you must know, I live in Cape Town, South Africa.
+If you must know, I live in Cape Town, South Africa.  
+Currently working as head of development at [WebSEO](https://webseo.co.za)
 
 ### Contact me
 
