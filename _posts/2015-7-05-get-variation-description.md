@@ -12,6 +12,9 @@ When using product variations in WooCommerce, you have the option of adding a de
 
 ![My Unicorn](http://i.imgur.com/4RDnPM1.png)
 
+One way to have it show up in your theme is to fetch it using AJAX as the user changes his variation selection on the product page.
+
+
 
 ```php
 
