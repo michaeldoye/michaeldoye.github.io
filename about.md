@@ -10,10 +10,10 @@ Some information about you!
 
 ### More Information
 A place to include any other types of information that you'd like to include about yourself.
-```javascript  
-/* Some pointless Javascript */  
-var rawr = ["r", "a", "w", "r"];  
-```
+        ```javascript  
+        /* Some pointless Javascript */  
+        var rawr = ["r", "a", "w", "r"];  
+        ```
 ### Contact me
 
 [email@domain.com](mailto:email@domain.com)
