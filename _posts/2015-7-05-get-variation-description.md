@@ -10,7 +10,7 @@ published: true
 
 When using product variations in WooCommerce, you have the option of adding a description for a single variation. However some themes do not show this by default.
 
-![My Unicorn](http://i.imgur.com/VFqBkuFl.jpg)
+![My Unicorn](http://i.imgur.com/4RDnPM1.png)
 
 
 ```php
