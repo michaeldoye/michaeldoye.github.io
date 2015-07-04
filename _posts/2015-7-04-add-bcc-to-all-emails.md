@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "WooCommerce: Add custom text to email based on payment method"
+title: "WooCommerce: Add BCC to all emails"
 published: true
 ---
 
