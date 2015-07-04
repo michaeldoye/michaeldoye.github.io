@@ -10,7 +10,7 @@ Some information about you!
 
 ### More Information
 <div>
-<div>
+</div>
 A place to include any other types of information that you'd like to include about yourself.
 
 ### Contact me
