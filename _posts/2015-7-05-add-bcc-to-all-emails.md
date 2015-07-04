@@ -7,7 +7,9 @@ published: true
 
 
 
-Sometimes it is quite handy to have access to all emails that get sent out from WooCommerce. The snippet below will allow you to do this by adding a bcc header to all outgoing WooCommerce emails.
+Sometimes it is quite handy to have access to all emails that get sent out from WooCommerce. 
+
+The snippet below will allow you to do this by adding a bcc header to all outgoing WooCommerce emails.
 
 
 ```php
