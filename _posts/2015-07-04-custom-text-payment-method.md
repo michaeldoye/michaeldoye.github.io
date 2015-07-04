@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Add custom text to email based on payment method"
+title: Add custom text to email based on payment method
 published: true
 ---
 
 
 
-    //For this example we’ll add some helpful payment instructions to the email, based on the checkout payment type used
-    // https://www.sellwithwp.com/customizing-woocommerce-order-emails/
+For this example we’ll add some helpful payment instructions to the email, based on the checkout payment type used
+
+
     add_action( 'woocommerce_email_before_order_table', 'add_order_email_instructions', 10, 2 );
      
     function add_order_email_instructions( $order, $sent_to_admin ) {
