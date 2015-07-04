@@ -6,24 +6,20 @@ published: true
 
 
 
-For this example we’ll add some helpful payment instructions to the email, based on the checkout payment type used
+Sometimes it is quite handy to have access to all emails that get sent out from WooCommerce. The snippet below will allow you to do this by adding a bcc header to all outgoing WooCommerce emails.
 
 
 ```php
 
-add_action( 'woocommerce_email_before_order_table', 'add_order_email_instructions', 10, 2 );
 
-function add_order_email_instructions( $order, $sent_to_admin ) {
-
-  if ( ! $sent_to_admin ) {
-
-    if ( 'cod' == $order->payment_method ) {
-      // cash on delivery method
-      echo '<p><strong>Instructions:</strong> Full payment is due immediately upon delivery: <em>cash only, no exceptions</em>.</p>';
-    } else {
-      // other methods (ie credit card)
-      echo '<p><strong>Instructions:</strong> Please look for "Madrigal Electromotive GmbH" on your next credit card statement.</p>';
-    }
-  }
+add_filter( 'woocommerce_email_headers', 'add_bcc_all_emails', 10, 2);
+ 
+function add_bcc_all_emails($headers, $object) {
+ 
+    $headers = array();
+    $headers[] = 'Bcc: Name <me@email.com>';
+    $headers[] = 'Content-Type: text/html';
+ 
+    return $headers;
 }
 ```
