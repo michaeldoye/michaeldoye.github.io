@@ -272,7 +272,15 @@ nav {
 
   .read-more {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 12px;
+    border: 1px solid #4183C4;
+    padding: 5px;
+    border-radius: 2px;
+    transition: all .4s ease-out;
+  }
+  .read-more:hover {
+      border-color: #555555;
+      color: #555555;
   }
 }
 
