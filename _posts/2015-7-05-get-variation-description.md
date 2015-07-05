@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "WooCommerce / Javascript: Get product varitation description"
+title: "WooCommerce / Javascript: Get product variation description"
 published: true
 ---
 
