@@ -12,7 +12,7 @@ Sometimes it is quite handy to have access to all emails that get sent out from 
 The snippet below will allow you to do this by adding a bcc header to all outgoing WooCommerce emails.
 
 
-```php
+```javascript
 
 
 add_filter( 'woocommerce_email_headers', 'add_bcc_all_emails', 10, 2);
