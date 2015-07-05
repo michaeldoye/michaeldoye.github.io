@@ -2,7 +2,10 @@
 layout: post
 title: "WooCommerce: Add custom text to email based on payment method"
 published: true
+tags: 
+  - php
 ---
+
 
 
 
