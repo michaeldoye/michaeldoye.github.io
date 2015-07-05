@@ -12,7 +12,7 @@ Sending a customer their shipping or way-bill number can certainly come in quite
 
 First we display the meta box in the order admin area:
 
-```php
+```javascript
 
 
 /**
@@ -54,7 +54,7 @@ function order_my_custom( $post ){
 
 Next, we want to be able to save the meta info we add when clicking the save-order button
 
-```php
+```javascript
 
 /**
  * Save Shipping Tracking information
