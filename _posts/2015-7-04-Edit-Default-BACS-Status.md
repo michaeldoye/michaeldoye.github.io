@@ -12,7 +12,7 @@ By default, WooCommerce sets new orders placed via BACS (EFT) to the "on-hold" o
 
 The snippet below will change the default status for BACS orders.  Simply add it to your theme functions.php file.
 
-```php
+```javascript
 
 // Remove the gateways filter so we can add our own
 remove_filter( 'woocommerce_payment_gateways', 'core_gateways' );
