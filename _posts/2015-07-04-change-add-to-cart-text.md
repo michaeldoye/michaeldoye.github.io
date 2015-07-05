@@ -10,7 +10,7 @@ published: true
 The below snippet will allow you to change the add to cart button text on single product pages for WooCommerce.
 
 
-```php
+```javascript
 
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
 
