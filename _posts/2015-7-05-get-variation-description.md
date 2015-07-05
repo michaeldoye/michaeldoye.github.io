@@ -2,6 +2,8 @@
 layout: post
 title: "WooCommerce / Javascript: Get product variation description"
 published: true
+tags:
+-javascript
 ---
 
 
