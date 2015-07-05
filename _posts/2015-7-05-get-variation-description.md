@@ -1,7 +1,6 @@
 ---
 layout: post
-tags: javascript
-tags: php 
+tags: [github, github-pages, jekyll]
 title: "WooCommerce / Javascript: Get product variation description"
 published: true
 ---
