@@ -4,7 +4,9 @@ title: "WooCommerce: add a shpping link or number to your orders"
 published: true
 tags: 
   - php
+  - woocommerce
 ---
+
 
 
 
