@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "WooCommerce: Change “add to cart” button text"
+title: Change “add to cart” button text
 published: true
 tags: 
   - php
   - woocommerce
 ---
+
 
 
 
