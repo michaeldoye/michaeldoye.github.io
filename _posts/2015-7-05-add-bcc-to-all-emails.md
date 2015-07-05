@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "WooCommerce: Add BCC to all emails"
+title: Add BCC to all emails
 published: true
 tags: 
   - php
   - woocommerce
 ---
+
 
 
 
