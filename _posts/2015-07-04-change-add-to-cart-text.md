@@ -4,6 +4,7 @@ title: "WooCommerce: Change “add to cart” button text"
 published: true
 tags: 
   - php
+  - woocommerce
 ---
 
 
