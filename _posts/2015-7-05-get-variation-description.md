@@ -3,6 +3,7 @@ layout: post
 tags: 
   - php
   - javascript
+  - woocommerce
 title: Get product variation description
 published: true
 ---
