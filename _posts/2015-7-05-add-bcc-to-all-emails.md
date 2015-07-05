@@ -4,7 +4,9 @@ title: "WooCommerce: Add BCC to all emails"
 published: true
 tags: 
   - php
+  - woocommerce
 ---
+
 
 
 
