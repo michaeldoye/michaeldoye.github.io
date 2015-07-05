@@ -310,12 +310,20 @@ footer {
   padding: 5px;
   font-weight: bold;
   text-transform: capitalize;
-  }
+}
 .label-tag {
   color: #ffffff;
   background: rgb(51, 74, 138);
-  }
+}
   
+.posts { 
+	.label {
+  	  float: right;
+  	  background: #ddd;
+  	  color: #555555;
+  	  margin-right: 5px;
+	}
+}  
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
