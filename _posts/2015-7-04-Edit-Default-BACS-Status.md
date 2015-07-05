@@ -2,7 +2,10 @@
 layout: post
 title: "WooCommerce: How to edit the default payment status for BACS orders"
 published: true
+tags: 
+  - php
 ---
+
 
 
 
