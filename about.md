@@ -18,6 +18,6 @@ Currently working as head of development at [Web SEO](https://webseo.co.za)
 
 [michaeldoye@gmail.com](mailto:michaeldoye@gmail.com)
 
-## Meta
+### Meta
 Website built using [Jekyll](https://github.com/barryclark/jekyll-now) and hosted on [GitHub](https://github.com/michaeldoye/michaeldoye.github.io)
 
