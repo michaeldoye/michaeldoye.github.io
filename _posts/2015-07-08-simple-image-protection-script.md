@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change “add to cart” button text
+title: Simple image protection script using javascript
 published: true
 tags: 
   - javascript
