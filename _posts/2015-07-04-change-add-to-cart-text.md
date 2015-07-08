@@ -54,12 +54,3 @@ function woo_archive_custom_cart_button_text() {
 	return __('Add to cart', 'woocommerce');
 }
 ```
-{% highlight [php] %}
-	foreach($woocommerce->cart->get_cart() as $cart_item_key => $values ) {
-		$_product = $values['data'];
-	
-		if( get_the_ID() == $_product->id ) {
-			return __('Already in cart', 'woocommerce');
-		}
-	}
-{% endhighlight %}
