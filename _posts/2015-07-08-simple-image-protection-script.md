@@ -26,7 +26,7 @@ document.ondragstart = function() {
 }
 
 // Disable context menu
-document.oncontextmenu = function nocontext(e) {
+document.oncontextmenu = function() {
   return false;
 }
 ```
