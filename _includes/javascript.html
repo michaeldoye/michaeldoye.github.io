@@ -1,5 +1,7 @@
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script>
+$(document).ready(function() {
+  
   $.fn.unveil = function(threshold, callback) {
 
     var $w = $(window),
@@ -56,4 +58,6 @@
       $img = $(this);
       $(this).css({'opacity':'1'}).next('a').attr('href', $img.attr('data-src') );
   });
+  
+});
 </script>
