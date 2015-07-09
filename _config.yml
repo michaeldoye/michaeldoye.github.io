@@ -18,7 +18,7 @@ avatar: https://avatars1.githubusercontent.com/u/4910775?v=3&s=460
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: 
+  email:
   facebook:
   flickr:
   github: michaeldoye
@@ -46,6 +46,8 @@ google_analytics: UA-49033472-1
 # Used for Sitemap.xml and your RSS feed
 url: http://michaeldoye.co.za/
 
+
+posts_json_path: awesome_posts.json
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
