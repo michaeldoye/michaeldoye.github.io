@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cpanel chron job to backup MySQL and send to email
+title: Cpanel chron job to backup MySQL database and send to email
 published: true
 tags: 
   - php
@@ -50,7 +50,7 @@ Choose your desired interval and in the command field type the following command
 
 ```
 
-Set your time interval for close to whatever time it is now so you can test that it is working.
+Set your time interval for close to whatever time it is now so you can test that it is working. It will store the file temporarily on your server and then delete once the email has been sent. (with the g-zipped database as an attachment)
 
 
 
