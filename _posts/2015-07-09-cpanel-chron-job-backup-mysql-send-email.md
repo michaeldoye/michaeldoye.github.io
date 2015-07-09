@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Cpanel chron job to backup MySql and send to email
+title: Cpanel chron job to backup MySQL and send to email
 published: true
 tags: 
   - php
   - cpanel
   - linux
 ---
-I had an idea for (semi) redundancy for one of our larger projects - an ECommerce store running on a  WordPress installation.
+I had an idea for (semi) redundancy for one of our larger projects - an E-commerce store running on a WordPress installation.
 
 In a nutshell the idea involves duplicating the account on another server and when receiving a notification from a monitoring tool that the server is down, we would change the domains `A` record to point to the backup server. There would still be few minutes of downtime but it would be minimal.
 
-I realized I would need some way of synchronising the the MySql databases between the production and back-up servers. This would be pretty important, considering the type of website - order numbers etc.
+I realized I would need some way of synchronising the the MySQL databases between the production and back-up servers. This would be pretty important, considering the type of website - order numbers etc.
 
-The site runs on Linux, with CentOS and Cpanel.  Through the Cpanel interface you can schedule cron Jobs that will run a given command. This would be perfect for getting a backup of the MySql database and saving it off-site.
+The site runs on Linux, with CentOS and Cpanel.  Through the Cpanel interface you can schedule cron Jobs that will run a given command. This would be perfect for getting a backup of the MySQL database and saving it off-site.
 
 ![image of chron here](http://i.imgur.com/fV2obi3.png)
 
@@ -21,10 +21,10 @@ I decided to start out some basic testing using a handy PHP script ([which I fou
 
 However I thought this would be something that other people would find quite useful to send less sensitive data.
 
-I will eventually have a python script that gets executed to do the MySql sync. 
+I will eventually have a python script that gets executed to do the MySQLmy sync. 
 In the meantime, here is how to do it using PHP.
 
-Firstly, you will want to download the PHP from [here](https://github.com/michaeldoye/ballin-octo-wookie). Then edit the backup.php file to include your details:
+Firstly, you will want to download the PHP from [here](https://github.com/michaeldoye/PHP-backup-MySQL-and-send-to-email). Then edit the backup.php file to include your details:
 
 ```javascript
 
