@@ -2,7 +2,7 @@
 layout: post
 title: Cpanel chron job to backup MySQL database and send to email
 published: true
-tags: 
+tags:
   - php
   - cpanel
   - linux
@@ -11,7 +11,7 @@ I had an idea for (semi) redundancy for one of our larger projects - an E-commer
 
 In a nutshell the idea involves duplicating the account on another server and when receiving a notification from a monitoring tool that the server is down, we would change the domains `A` record to point to the backup server. There would still be few minutes of downtime but it would be minimal.
 
-I realized I would need some way of synchronising the the MySQL databases between the production and back-up servers. This would be pretty important, considering the type of website - order numbers etc.
+I realized I would need some way of synchronizing the the MySQL databases between the production and back-up servers. This would be pretty important, considering the type of website - order numbers etc.
 
 The site runs on Linux, with CentOS and Cpanel.  Through the Cpanel interface you can schedule cron Jobs that will run a given command. This would be perfect for getting a backup of the MySQL database and saving it off-site.
 
@@ -21,7 +21,7 @@ I decided to start out some basic testing using a handy PHP script ([which I fou
 
 However I thought this would be something that other people would find quite useful to send less sensitive data.
 
-I will eventually have a python script that gets executed to do the MySQLmy sync. 
+I will eventually have a python script that gets executed to do the MySQLmy sync.
 In the meantime, here is how to do it using PHP.
 
 Firstly, you will want to download the PHP from [here](https://github.com/michaeldoye/PHP-backup-MySQL-and-send-to-email). Then edit the backup.php file to include your details:
@@ -51,7 +51,3 @@ Choose your desired interval and in the command field type the following command
 ```
 
 Set your time interval for close to whatever time it is now so you can test that it is working. It will store the file temporarily on your server and then delete once the email has been sent. (with the g-zipped database as an attachment)
-
-
-
-
