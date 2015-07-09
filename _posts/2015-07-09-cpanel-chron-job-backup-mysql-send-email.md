@@ -4,6 +4,8 @@ title: Cpanel chron job to backup MySql and send to email
 published: true
 tags: 
   - php
+  - cpanel
+  - linux
 ---
 I had an idea for (semi) redundancy for one of our larger projects - an ECommerce store running on a  WordPress installation.
 
