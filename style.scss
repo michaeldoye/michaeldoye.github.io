@@ -315,16 +315,36 @@ footer {
   color: #ffffff;
   background: rgb(51, 74, 138);
 }
-  
-.posts { 
+
+.posts {
 	.label {
   	  float: right;
   	  background: #ddd;
   	  color: #555555;
   	  margin-right: 5px;
 	}
-}  
+}
+ 
+a.previous, a.next {
+    float: right;
+    font-size: 15px;
+    background: #e8e8e8;
+    padding: 5px;
+    color: #000000;
+    margin-right: 5px;
+}
 
+a.previous:hover, a.next:hover {
+    color: #4183C4;
+}
+
+span.page_number {
+    font-size: 15px;
+    float: left;
+    color: #000000;
+    background: #e8e8e8;
+    padding: 5px;
+}
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
