@@ -324,7 +324,7 @@ footer {
   	  margin-right: 5px;
 	}
 }
- 
+
 a.previous, a.next {
     float: right;
     font-size: 15px;
@@ -344,6 +344,12 @@ span.page_number {
     color: #000000;
     background: #e8e8e8;
     padding: 5px;
+}
+
+.pagination {
+    margin-top: 10px;
+    border-top: 2px solid #555555;
+    padding-top: 10px;
 }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
