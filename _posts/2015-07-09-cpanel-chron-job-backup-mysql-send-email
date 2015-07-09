@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cpanel chron job to backup MySql and send to email
+title: "Cpanel chron job to backup MySql and send to email"
 published: true
 tags: 
   - php
