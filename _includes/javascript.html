@@ -50,12 +50,16 @@ $(document).ready(function() {
       $( this ).attr('data-src', src);
       $( this ).attr('src', 'http://www.devsites.co.za/custom/price/ajax-loader.gif').css({"width":"auto"});
   } );
-  
-  $(".post img").unveil(50, function() {
+  setTimout(function() {
+      $(".post img").unveil();
+  }, 500);
+  /*
+  50, function() {
       $(this).load(function() {
         //this.style.opacity = 1;
       });
   });
+  */
   
 });
 </script>
