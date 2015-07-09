@@ -5,7 +5,7 @@ published: true
 tags: 
   - php
 ---
-I had an idea to for (semi) redundancy for one of our larger projects - an ECommerce store running on a  WordPress installation.
+I had an idea for (semi) redundancy for one of our larger projects - an ECommerce store running on a  WordPress installation.
 
 In a nutshell the idea involves duplicating the account on another server and when receiving a notification from a monitoring tool that the server is down, we would change the domains `A` record to point to the backup server. There would still be few minutes of downtime but it would be minimal.
 
@@ -43,7 +43,10 @@ You will need to then upload these files to your server so that you can point a 
 
 Choose your desired interval and in the command field type the following command:
 
-`/user/bin/php -q /home/account/public_html/path-to-folder/backup.php`
+```
+/user/bin/php -q /home/account/public_html/path-to-folder/backup.php
+
+```
 
 Set your time interval for close to whatever time it is now so you can test that it is working.
 
