@@ -13,12 +13,8 @@ shipping is available.
 The following snippet will unset flat_rate shipping if free shipping is set during
 checkout.
 
-      /**
-     * woocommerce_package_rates is a 2.1+ hook
-     * Hide shipping rates when free shipping is available
-     */
-
-    add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available', 10, 2 );
+    <?php
+    add_filter( 'woocommerce_package_rates',  'hide_shipping_when_free_is_available', 10, 2 );
 
     /**
      * @param array $rates Array of rates found for the package
