@@ -216,7 +216,7 @@ var MyTodoCollection = Backbone.Firebase.Collection.extend({
   autoSync: false // Data will NOT sync in realtime
 });
 
-var collection = MyTodoCollection();
+var collection = new MyTodoCollection();
 collection.fetch() // Fetch your data as normal
 ```
 Be sure to see the [BackboneFire GitHub Repo](https://github.com/firebase/backbonefire) for further information and handy tips!
