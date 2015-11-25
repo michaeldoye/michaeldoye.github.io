@@ -17,5 +17,16 @@ published: true
 
 </div>
 <script>
-alert('works');
+// First, create a basic model
+var MyTodo = Backbone.Model.extend({
+  defaults: {
+    title: "New Todo"
+  }
+});
+
+// Create a Firebase Collection, use your Firebase URL as the url property
+var MyTodoCollection = Backbone.Firebase.Collection.extend({
+  model: MyTodo,
+  url: "https://[YOUR-FIREBASE-APP].firebaseio.com"
+});
 </script>
