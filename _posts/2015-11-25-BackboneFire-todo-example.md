@@ -5,15 +5,17 @@ tags:
   - backbone.js
   - firebase
 title: Simple todo App with Backbone and Firebase
-published: false
+published: true
 ---
 
 
 
 
 
+![My Unicorn](http://i.imgur.com/B7si9hF.png)
 
-[Firebase](https://www.firebase.com) is a fantastically handy realtime database, in which you store your data in JSON format, this tutorial aims to provide a very simple example [todo app](https://backbonefire.firebaseapp.com/) which you can easily extend upon to build something amazing in realtime.
+
+[Firebase](https://www.firebase.com) is a fantastically handy realtime database, in which you store your data in JSON format, this tutorial aims to provide a very simple example [todo app](http://michaeldoye.co.za/todo.html) which you can easily extend upon to build something amazing in realtime.
 
 
 ## First steps
@@ -155,6 +157,44 @@ And that is the short and sweet of it! You should now have a fully functioning *
 
 <hr>
 
+## Further Reading
+
+One thing that was not covered above is removing models from the firebase collection, I feel it is quite relevant so here is how you would remove a todo from the list:
+
+## Removing a Model from a Firebase Collection
+
+Removing a model is quite simple, to do this we will use the `destroy` method and set up our view (individual todo item) to listen for the `destroy` event which gets emitted when `destroy` is called.
+
+```
+// Individual todo item
+var TodoView = Backbone.View.extend({
+  tagName:  "li",
+  className: "list-group-item",
+  template: _.template("<%= title %> <span class='badge remove'>x</span>"),
+  events: {
+      "click .remove" : "clear"
+  },
+  initialize: function() {
+    this.listenTo(this.model, "change", this.render);
+    this.listenTo(this.model, "destroy", this.remove);
+  },
+  render: function() {
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
+  },
+  clear: function() {
+    this.model.destroy();
+  },
+});
+```
+You will notice in the code above there are a few new things, as you should already be familiar with Backbone, the above code should be pretty straight-forward.
+
+We have added an `events` property which will handle the click of the remove button (which I have included in the `template`) which in turn will call the `clear` function thus destroying the model.
+
+We have also added `this.listenTo(this.model, "destroy", this.remove);` this will listen for the `destroy` event and subsequently remove itself from the DOM.
+
+This will also remove the model from the Firebase database, and re-render the single todo view across all clients.
+
 Be sure to see the [BackboneFire GitHub Repo](https://github.com/firebase/backbonefire) for further information and handy tips!
 
-<sub>This tutorial is based off the [todo app by Firebase](https://backbonefire.firebaseapp.com/). Source and official docs can be found [here](https://www.firebase.com/docs/web/libraries/backbone/quickstart.html).</sub>
+<sub>This tutorial is based on the [todo app by Firebase](https://backbonefire.firebaseapp.com/). Source and official docs can be found [here](https://www.firebase.com/docs/web/libraries/backbone/quickstart.html).</sub>
