@@ -73,7 +73,7 @@ var TodoView = Backbone.View.extend({
 ```
 ## How to read your data from Firebase
 
-As soon as we initialize a `Backbone.Firebase.Collection` our data is synced with the Firebase database. (`fetch` is not required and Firebase will simply ignore `fetch` calls) If we `listenTo` when a collection changes are able to add new items to the collection in realtime.  Here we create a view for the entire application and set up the view to listen for when a new item is added to the collection, and then call the `addOne` function which will append the new item to the collection. Easy right?
+As soon as we initialize a `Backbone.Firebase.Collection` our data is synced with the Firebase database. (`fetch` is not required and Firebase will simply ignore `fetch` calls) If we `listenTo` when a collection changes we are then able to add new items to the collection in realtime.  Here we create a view for the entire application and set up the view to listen for when a new item is added to the collection, and then call the `addOne` function which will append the new item to the collection. Easy right?
 
 
 ```javascript
@@ -152,6 +152,8 @@ Finally, once the DOM is ready, we can start the application.
 $(function() { initFirebase() });
 
 ```
+![Another Unicorn](http://i.imgur.com/BQh1hXd.png)
+
 And that is the short and sweet of it! You should now have a fully functioning **realtime** TODO app :)
 
 <hr>
@@ -193,8 +195,16 @@ We have also added `this.listenTo(this.model, "destroy", this.remove);` this wil
 
 This will also remove the model from the Firebase database, and re-render the single todo view across all clients.
 
+It's also handy to note that `destroy` can take `success` / `error` callbacks.
 
-Another Noteworthy topic to cover is `autoSync`
+```javascript
+clear: function() {
+    this.model.destroy({success: function(model, response) {
+       // Do something if successful
+    }});
+},
+```
+
 ## Autosync
 
 You can control whether or not make use of the Firebase realtime capabilities by setting the `autoSync` property. `autoSync` is **enabled** by default.
