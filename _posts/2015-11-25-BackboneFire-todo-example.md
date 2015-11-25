@@ -10,12 +10,11 @@ published: true
 
 
 
+[Firebase](https://www.firebase.com) is a fantastically handy realtime database, in which you store your data in JSON format, this tutorial aims to provide a very simple example [todo app](http://michaeldoye.co.za/todo.html) which you can easily extend upon to build something amazing in realtime.
 
 
 ![My Unicorn](http://i.imgur.com/B7si9hF.png)
 
-
-[Firebase](https://www.firebase.com) is a fantastically handy realtime database, in which you store your data in JSON format, this tutorial aims to provide a very simple example [todo app](http://michaeldoye.co.za/todo.html) which you can easily extend upon to build something amazing in realtime.
 
 
 ## First steps
