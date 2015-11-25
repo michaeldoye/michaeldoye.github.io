@@ -83,13 +83,17 @@ var MyAppView = Backbone.View.extend({
     this.input.val('');
  }
 });
+
+
 function initFirebase() {
   var collection = new MyTodoCollection();
   var app = new MyAppView({ collection: collection });
 }
 
 $(function() { initFirebase() });
+
 </script>
+
 <style>
 input#add-todo {
     width: 87%;
