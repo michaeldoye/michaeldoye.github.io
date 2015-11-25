@@ -21,7 +21,7 @@ published: true
 
 To begin with, we need to include some dependencies in our HTML, these will allow us to use BackboneFire:
 
-```
+```html
 <!-- We need Backbone, Underscore and jQuery -->
 <script src="path/to/jquery.js"></script>
 <script src="path/to/underscore.js"></script>
@@ -38,7 +38,7 @@ To begin with, we need to include some dependencies in our HTML, these will allo
 For this tutorial we will use a `Backbone.Firebase.collection` to sync data with the Firebase database. Use your Firebase URL as the `url` property for the collection. We will also need to create 2 views for this app - one for individual todos and one for the whole app.
 
 
-```
+```javascript
 // First, create a basic model
 var MyTodo = Backbone.Model.extend({
   defaults: {
@@ -57,7 +57,7 @@ var MyTodoCollection = Backbone.Firebase.Collection.extend({
 
 One of the coolest things about Firebase is the realtime database, this means that when listening to changes on our model, we can re-render views as changes occur (even if the changes happen on a remote client!), we set this up using [`listenTo`](http://backbonejs.org/#Events-listenTo), which will essentially just call the render function.
 
-```
+```javascript
 // Individual todo item
 var TodoView = Backbone.View.extend({
   tagName:  "li",
@@ -76,7 +76,7 @@ var TodoView = Backbone.View.extend({
 As soon as we initialize a `Backbone.Firebase.Collection` our data is synced with the Firebase database. (`fetch` is not required and Firebase will simply ignore `fetch` calls) If we `listenTo` when a collection changes are able to add new items to the collection in realtime.  Here we create a view for the entire application and set up the view to listen for when a new item is added to the collection, and then call the `addOne` function which will append the new item to the collection. Easy right?
 
 
-```
+```javascript
 // The view for the entire application
 var MyAppView = Backbone.View.extend({
   el: $('#mytodoapp'),
@@ -92,7 +92,7 @@ var MyAppView = Backbone.View.extend({
 ```
 If we include this HTML we will then be able to update TODOs in realtime :)
 
-```
+```html
 <div id="mytodoapp">
   <ul id="todo-items"><!-- Todos will appear here --></ul>
 </div>
@@ -102,7 +102,7 @@ If we include this HTML we will then be able to update TODOs in realtime :)
 
 At this stage our app is only half-baked as we haven't set up the ability to create new TODOs. To do this, all we need is to create a input field and a button.
 
-```
+```html
 <div id="mytodoapp">
   <ul id="todo-items"><!-- Todos will appear here --></ul>
   <input type="text" id="add-todo" />
@@ -112,7 +112,7 @@ At this stage our app is only half-baked as we haven't set up the ability to cre
 By using a `create` function in our main app view we are now able to add new TODOs to our database. You will need to modify the main view by adding the `createNewTodo` function:
 
 
-```
+```javascript
 // The main view for the application
 var MyAppView = Backbone.View.extend({
   el: $('#mytodoapp'),
@@ -139,7 +139,7 @@ var MyAppView = Backbone.View.extend({
 ```
 We can then create an initialize function which will start off the application
 
-```
+```javascript
 function initFirebase() {
   var collection = new MyTodoCollection();
   var app = new MyAppView({ collection: collection });
@@ -147,7 +147,7 @@ function initFirebase() {
 ```
 Finally, once the DOM is ready, we can start the application.
 
-```
+```javascript
 
 $(function() { initFirebase() });
 
@@ -164,7 +164,7 @@ One thing that was not covered above is removing models from the firebase collec
 
 Removing a model is quite simple, to do this we will use the `destroy` method and set up our view (individual todo item) to listen for the `destroy` event which gets emitted when `destroy` is called.
 
-```
+```javascript
 // Individual todo item
 var TodoView = Backbone.View.extend({
   tagName:  "li",
