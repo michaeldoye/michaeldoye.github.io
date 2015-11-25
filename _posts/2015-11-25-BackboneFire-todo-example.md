@@ -154,6 +154,8 @@ $(function() { initFirebase() });
 ```
 ![Another Unicorn](http://i.imgur.com/BQh1hXd.png)
 
+[**See it in action**](http://michaeldoye.co.za/todo.html)
+
 And that is the short and sweet of it! You should now have a fully functioning **realtime** TODO app :)
 
 <hr>
