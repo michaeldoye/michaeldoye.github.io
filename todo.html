@@ -36,7 +36,7 @@ var MyTodo = Backbone.Model.extend({
 // Create a Firebase Collection, use your Firebase URL as the url property
 var MyTodoCollection = Backbone.Firebase.Collection.extend({
   model: MyTodo,
-  url: "https://ranktracker.firebaseio.com"
+  url: "https://ranktracker.firebaseio.com/todos"
 });
 
 // Individual todo item
