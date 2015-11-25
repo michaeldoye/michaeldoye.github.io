@@ -13,9 +13,9 @@ published: true
 
     <article class="post">
         <div id="mytodoapp">
-          <ul id="todo-items"><!-- Todos will appear here --></ul>
-          <input type="text" id="add-todo" />
-          <button id="add-todo">Add Todo</button>
+          <ul class="list-group" id="todo-items"><!-- Todos will appear here --></ul>
+          <input class="form-control" type="text" id="add-todo" />
+          <button class="btn btn-primary" id="add-todo">Add Todo</button>
         </div>
     </article>
 
@@ -42,7 +42,8 @@ var MyTodoCollection = Backbone.Firebase.Collection.extend({
 // Individual todo item
 var TodoView = Backbone.View.extend({
   tagName:  "li",
-  template: _.template("<%= title %>"),
+  className: "list-group-item",
+  template: _.template("<%= title %> <span class="badge remove">x</span>"),
   initialize: function() {
     this.listenTo(this.model, "change", this.render);
   },
