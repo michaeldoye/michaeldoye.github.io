@@ -168,8 +168,7 @@ Removing a model is quite simple, to do this we will use the `destroy` method an
 // Individual todo item
 var TodoView = Backbone.View.extend({
   tagName:  "li",
-  className: "list-group-item",
-  template: _.template("<%= title %> <span class='badge remove'>x</span>"),
+  template: _.template("<%= title %> <span class='remove'>x</span>"),
   events: {
       "click .remove" : "clear"
   },
