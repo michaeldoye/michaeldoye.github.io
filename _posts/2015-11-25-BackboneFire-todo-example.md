@@ -193,6 +193,32 @@ We have also added `this.listenTo(this.model, "destroy", this.remove);` this wil
 
 This will also remove the model from the Firebase database, and re-render the single todo view across all clients.
 
+
+Another Noteworthy topic to cover is `autoSync`
+## Autosync
+
+You can control whether or not make use of the Firebase realtime capabilities by setting the `autoSync` property. `autoSync` is **enabled** by default.
+
+```javascript
+var MyTodoCollection = Backbone.Firebase.Collection.extend({
+  model: MyTodo,
+  url: "https://[YOUR-FIREBASE-APP].firebaseio.com",
+  autoSync: true // Data will sync in realtime
+});
+```
+
+This means that you will not have to call `fetch`, instead your data remains synced with your application. Setting this to `false` to remove the realtime capabilities.
+
+```javascript
+var MyTodoCollection = Backbone.Firebase.Collection.extend({
+  model: MyTodo,
+  url: "https://[YOUR-FIREBASE-APP].firebaseio.com",
+  autoSync: false // Data will NOT sync in realtime
+});
+
+var collection = MyTodoCollection();
+collection.fetch() // Fetch your data as normal
+```
 Be sure to see the [BackboneFire GitHub Repo](https://github.com/firebase/backbonefire) for further information and handy tips!
 
 <sub>This tutorial is based on the [todo app by Firebase](https://backbonefire.firebaseapp.com/). Source and official docs can be found [here](https://www.firebase.com/docs/web/libraries/backbone/quickstart.html).</sub>
