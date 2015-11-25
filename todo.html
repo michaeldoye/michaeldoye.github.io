@@ -12,7 +12,11 @@ published: true
 <div class="posts">
 
     <article class="post">
-
+        <div id="mytodoapp">
+          <ul id="todo-items"><!-- Todos will appear here --></ul>
+          <input type="text" id="add-todo" />
+          <button id="add-todo">Add Todo</button>
+        </div>
     </article>
 
 </div>
@@ -31,6 +35,43 @@ var MyTodo = Backbone.Model.extend({
 // Create a Firebase Collection, use your Firebase URL as the url property
 var MyTodoCollection = Backbone.Firebase.Collection.extend({
   model: MyTodo,
-  url: "https://[YOUR-FIREBASE-APP].firebaseio.com"
+  url: "https://ranktracker.firebaseio.com"
+});
+
+// Individual todo item
+var TodoView = Backbone.View.extend({
+  tagName:  "li",
+  template: _.template("<%= title %>"),
+  initialize: function() {
+    this.listenTo(this.model, "change", this.render);
+  },
+  render: function() {
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
+  },
+});
+
+// The main view for the application
+var MyAppView = Backbone.View.extend({
+  el: $('#mytodoapp'),
+  events: {
+    "click #add-todo" : "createNewTodo",
+  },
+  initialize: function() {
+    this.list = this.$("#todo-items");
+    // Input for new Todos
+    this.input = this.$("#add-todo");
+    this.listenTo(this.collection, 'add', this.addOne);
+  },
+  addOne: function(todo) {
+    var view = new TodoView({model: todo});
+    this.list.append(view.render().el);
+  },
+  createNewTodo: function(e) {
+    // Ensure input is not empty
+    if (!this.input.val()) { return; }
+    this.collection.create({title: this.input.val()});
+    this.input.val('');
+  }
 });
 </script>
