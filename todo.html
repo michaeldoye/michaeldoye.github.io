@@ -44,12 +44,19 @@ var TodoView = Backbone.View.extend({
   tagName:  "li",
   className: "list-group-item",
   template: _.template("<%= title %> <span class='badge remove'>x</span>"),
+  events: {
+      "click .remove" : "clear"
+  },
   initialize: function() {
     this.listenTo(this.model, "change", this.render);
+    this.listenTo(this.model, "destroy", this.remove);
   },
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
     return this;
+  },
+  clear: function() {
+    this.model.destroy();
   },
 });
 
@@ -74,7 +81,7 @@ var MyAppView = Backbone.View.extend({
     if (!this.input.val()) { return; }
     this.collection.create({title: this.input.val()});
     this.input.val('');
-  }
+ }
 });
 function initFirebase() {
   var collection = new MyTodoCollection();
@@ -83,3 +90,17 @@ function initFirebase() {
 
 $(function() { initFirebase() });
 </script>
+<style>
+input#add-todo {
+    width: 87%;
+    float: left;
+}
+
+button#add-todo {
+    float: left;
+}
+
+.remove:hover {
+    cursor: pointer;
+}
+</style>
