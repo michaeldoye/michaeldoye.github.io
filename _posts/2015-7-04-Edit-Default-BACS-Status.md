@@ -2,7 +2,7 @@
 layout: post
 title: How to edit the default payment status for BACS orders
 published: true
-tags: 
+tags:
   - php
   - woocommerce
 ---
@@ -16,6 +16,10 @@ tags:
 By default, WooCommerce sets new orders placed via BACS (EFT) to the "on-hold" order status. This is sometimes a pain in the neck if your order flow needs to be customized.
 
 The snippet below will change the default status for BACS orders.  Simply add it to your theme functions.php file.
+
+**Update:**
+
+_Thanks to the comments for pointing out the duplicate bank details the `my_core_gateways` function has been modified._
 
 ```javascript
 
@@ -31,10 +35,16 @@ add_filter( 'woocommerce_payment_gateways', 'my_core_gateways' );
  * @param mixed $methods
  * @return void
  */
-function my_core_gateways( $methods ) {
-    $methods[] = 'WC_Gateway_BACS_custom';
-    return $methods;
-}
+
+ function my_core_gateways( $methods ) {
+
+ 	foreach ($methods as &$method){
+ 		if($method == 'WC_Gateway_BACS'){
+ 			$method = 'WC_Gateway_BACS_custom';
+ 		}
+ 	}
+     return $methods;
+ }
 
 class WC_Gateway_BACS_custom extends WC_Gateway_BACS {
 
@@ -45,7 +55,7 @@ class WC_Gateway_BACS_custom extends WC_Gateway_BACS {
    * @param int $order_id
    * @return array
    */
-   
+
   function process_payment( $order_id ) {
     global $woocommerce;
     $order = new WC_Order( $order_id );
@@ -57,13 +67,13 @@ class WC_Gateway_BACS_custom extends WC_Gateway_BACS {
     $order->reduce_order_stock();
 
     // Remove cart
-    $woocommerce->cart->empty_cart();     
+    $woocommerce->cart->empty_cart();
 
     // Return thankyou redirect
     return array(
         'result'  => 'success',
         'redirect'  => $this->get_return_url( $order )
     );
-  } 
+  }
 }
 ```
