@@ -19,7 +19,7 @@ The snippet below will change the default status for BACS orders.  Simply add it
 
 **Update:**
 
-_Thanks to the comments for pointing out the duplicate bank details the `my_core_gateways` function has been modified._
+_Thanks to the comments for pointing out the duplicate bank details the my_core_gateways function has been modified._
 
 ```javascript
 
